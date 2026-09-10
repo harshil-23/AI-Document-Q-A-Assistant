@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rag-document-qa
+
+  datasource:
+    url: jdbc:h2:mem:ragdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+  h2:
+    console:
+      enabled: true
+
+openai:
+  api-key: ${OPENAI_API_KEY:}
